@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'basic-pitch'`, () => {
+  it(`should have as title 'audik-trainer'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('basic-pitch');
+    expect(app.title).toEqual('audik-trainer');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('basic-pitch app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('audik-trainer app is running!');
   });
 });

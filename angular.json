@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "basic-pitch": {
+    "audik-trainer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/basic-pitch",
+            "outputPath": "dist/audik-trainer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "basic-pitch:build:production"
+              "browserTarget": "audik-trainer:build:production"
             },
             "development": {
-              "browserTarget": "basic-pitch:build:development"
+              "browserTarget": "audik-trainer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "basic-pitch:build"
+            "browserTarget": "audik-trainer:build"
           }
         },
         "test": {

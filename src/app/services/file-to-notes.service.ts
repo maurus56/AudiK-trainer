@@ -4,7 +4,7 @@ import {
   NoteEventTime,
   noteFramesToTime,
   addPitchBendsToNoteEvents,
-  outputToNotesPoly,
+  outputToNotesPoly
 } from '@spotify/basic-pitch';
 
 
@@ -106,6 +106,8 @@ export class FileToNotesService {
         outputToNotesPoly(frames, onsets, 0.25, 0.25, 5),
       ),
     );
+
+
 
     return notes;
   };

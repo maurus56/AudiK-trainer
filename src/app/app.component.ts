@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NoteEventTime } from '@spotify/basic-pitch/types';
+import { generateFileData} from '@spotify/basic-pitch';
+import { saveAs } from 'file-saver';
 import { FileToNotesService } from './services/file-to-notes.service';
 
 @Component({
@@ -8,7 +10,6 @@ import { FileToNotesService } from './services/file-to-notes.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'audik-trainer';
 
   private file: File | undefined;
   private notes: NoteEventTime[] | undefined;
@@ -50,6 +51,17 @@ export class AppComponent {
 
     return true;
   }
+
+  notesToMidi(){
+    if (this.notes){
+      saveAs(new File([generateFileData(this.notes) as Uint8Array], 'saved.mid'));
+    }
+  }
+
+  isNotesFilled(){
+    return this.notes !== undefined;
+  }
+  
 
 
 }

@@ -1,4 +1,4 @@
-<h1>Audik Trainer</h1>
+<h1>AudiK Trainer</h1>
 
 <h2>From a local audio file</h2>
 <p>You can use your own music file (i.e. actual audio, not midi) for transcription:</p>
@@ -8,6 +8,7 @@
     <input type="file" (change)="fileChanged($event)">
   </label>
   <button class="" (click)="transcript()">Transcript</button>
+  <button *ngIf="isNotesFilled()" class="" (click)="notesToMidi()">Download</button>
   <br>
   <p><b>File Duration: </b> <code *ngIf="this.duration" >{{this.duration | number : '1.2-2'}}s</code></p>
   <p><audio id="filePlayer" controls hidden></audio></p>

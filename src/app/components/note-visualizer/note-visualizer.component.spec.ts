@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NoteSequenceComponent } from './note-sequence.component';
+import { NoteVisualizerComponent } from './note-visualizer.component';
 
-describe('NoteSequenceComponent', () => {
-  let component: NoteSequenceComponent;
-  let fixture: ComponentFixture<NoteSequenceComponent>;
+describe('NoteVisualizerComponent', () => {
+  let component: NoteVisualizerComponent;
+  let fixture: ComponentFixture<NoteVisualizerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NoteSequenceComponent ]
+      declarations: [ NoteVisualizerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NoteSequenceComponent);
+    fixture = TestBed.createComponent(NoteVisualizerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

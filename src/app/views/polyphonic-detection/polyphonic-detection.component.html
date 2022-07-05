@@ -1,0 +1,30 @@
+<h2>From a local audio file</h2>
+<p>You can use your own music file (i.e. actual audio, not midi) for transcription:</p>
+<section>
+  <label class="button">
+    Load audio file
+    <input type="file" (change)="fileChanged($event)">
+  </label>
+  <button *ngIf="isFileFilled()" class="" (click)="transcript()">Transcript</button>
+  <button *ngIf="isNotesFilled()" class="" (click)="notesToMidi()">Download</button>
+  <br>
+  <p><b>File Duration: </b> <code *ngIf="this.duration" >{{this.duration | number : '1.2-2'}}s</code></p>
+  <p><audio id="filePlayer" controls hidden></audio></p>
+  <p><b>Actual Transcription:</b> <code id="file-results" class="file"></code></p>
+  <p><b>It Took:</b> <code id="file-time" class="file"></code></p>
+  <p><b>Total Leaked Memory:</b> <code id="file-leaked-memory"></code></p>
+</section>
+
+<h2>From a microphone recording --TODO</h2>
+<p>You can record piano audio from a microphone and transcribe it. If you're recording
+  something other than piano (like your voice), this will be transcribed but it
+  will probably be fairly noisy and incorrect.
+</p>
+<section>
+  <button id="recordBtn">Record</button>
+  <br>
+  <p><audio id="recorderPlayer" controls hidden></audio></p>
+  <p><b>Actual Transcription:</b> <code id="recorder-results" class="recorder"></code></p>
+  <p><b>It Took:</b> <code id="recorder-time" class="recorder"></code></p>
+  <p><b>Total Leaked Memory:</b> <code id="recorder-leaked-memory"></code></p>
+</section>

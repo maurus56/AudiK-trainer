@@ -1,33 +1,28 @@
-<h1>AudiK Trainer</h1>
 
 
-<h2>From a local audio file</h2>
-<p>You can use your own music file (i.e. actual audio, not midi) for transcription:</p>
-<section>
-  <label class="button">
-    Load audio file
-    <input type="file" (change)="fileChanged($event)">
-  </label>
-  <button *ngIf="isFileFilled()" class="" (click)="transcript()">Transcript</button>
-  <button *ngIf="isNotesFilled()" class="" (click)="notesToMidi()">Download</button>
-  <br>
-  <p><b>File Duration: </b> <code *ngIf="this.duration" >{{this.duration | number : '1.2-2'}}s</code></p>
-  <p><audio id="filePlayer" controls hidden></audio></p>
-  <p><b>Actual Transcription:</b> <code id="file-results" class="file"></code></p>
-  <p><b>It Took:</b> <code id="file-time" class="file"></code></p>
-  <p><b>Total Leaked Memory:</b> <code id="file-leaked-memory"></code></p>
-</section>
+<nav style="display: inline-flex">
+    <h1 style="margin-right: 0.5rem;">AudiK Trainer</h1>
+    <a routerLink="/notes" style="margin: 0.5rem;display: grid;align-items: center;"><span>Simple Notes</span></a>
+    <a routerLink="/polyphonic" style="margin: 0.5rem;display: grid;align-items: center;"><span>Polyphonic</span></a>
+</nav>
 
-<h2>From a microphone recording --TODO</h2>
-<p>You can record piano audio from a microphone and transcribe it. If you're recording
-  something other than piano (like your voice), this will be transcribed but it
-  will probably be fairly noisy and incorrect.
-</p>
-<section>
-  <button id="recordBtn">Record</button>
-  <br>
-  <p><audio id="recorderPlayer" controls hidden></audio></p>
-  <p><b>Actual Transcription:</b> <code id="recorder-results" class="recorder"></code></p>
-  <p><b>It Took:</b> <code id="recorder-time" class="recorder"></code></p>
-  <p><b>Total Leaked Memory:</b> <code id="recorder-leaked-memory"></code></p>
-</section>
+<!-- <input type="checkbox" id="checkbox">
+<label class="btn" for="checkbox"><i class="fa fa-bars"></i> <span>Menu</span></label>
+
+<div class="sidebar">
+    <ul>
+        <a routerLink="/notes"><li>Simple Notes</li></a>
+        <a routerLink="/polyphonic"><li>Polyphonic</li></a>
+        <a href="#"><li><i class="fa fa-tachometer"></i>Dashboard</li></a>
+        <a href="#"><li><i class="fa fa-lightbulb-o"></i>Widgets</li></a>
+        <a href="#" class="active"><li><i class="fa fa-line-chart"></i>Charts</li></a>
+        <a href="#"><li><i class="fa fa-television"></i>Front-End</li></a>
+        <a href="#"><li><i class="fa fa-send"></i>Email</li></a>
+        <a href="#"><li><i class="fa fa-wpforms"></i>Forms</li></a>
+        <a href="#"><li><i class="fa fa-paint-brush"></i>UI Elements</li></a>
+        <a href="#"><li><i class="fa fa-file-text-o"></i>Pages</li></a>
+        <a href="#"><li><i class="fa fa-globe"></i>Google Maps</li></a>
+    </ul>
+</div> -->
+
+<router-outlet></router-outlet>

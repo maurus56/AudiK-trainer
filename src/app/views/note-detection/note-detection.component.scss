@@ -1,0 +1,226 @@
+@import url('https://css.gg/css?=|play-button|play-pause|play-stop');
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+button {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+	background: #f3f3f3;
+	color: #3a3a3a;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	width: 90%;
+	margin: auto;
+}
+
+main > div:first-of-type {
+	position: relative;
+}
+
+h3 {
+	font-size: 8rem;
+	margin: 0;
+	margin-bottom: 3rem;
+}
+
+h4 {
+	margin: 0;
+	margin-top: 1.4rem;
+}
+
+p {
+	font-size: 2rem;
+}
+
+header {
+	padding: 0.6rem;
+	background: #a1f0dc;
+	font-size: 0.8rem;
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+
+footer {
+	font-size: 0.8rem;
+	margin-top: 1rem;
+	margin-bottom: 1.4rem;
+}
+
+footer a {
+	font-weight: 700;
+	text-decoration: none;
+	color: #a1f0dc;
+}
+
+/* Animation from: https://www.gradient-animator.com/ */
+footer a:hover,
+footer a:focus {
+	background: linear-gradient(
+		270deg,
+		#00c2eb 20%,
+		#a1f0dc 40%,
+		#00c2eb 60%,
+		#a1f0dc 80%
+	);
+	background-size: 400% auto;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	-webkit-animation: TextGradientAnimation 3s ease infinite;
+	-moz-animation: TextGradientAnimation 3s ease infinite;
+	animation: TextGradientAnimation 3s ease infinite;
+}
+
+aside {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+button {
+	font-size: 1.6rem;
+	font-weight: 700;
+	border: none;
+
+	cursor: pointer;
+	outline: none;
+}
+
+.start-button {
+	font-size: 1.6rem;
+	font-weight: 700;
+	border-radius: 0.3rem;
+	padding: 1.2rem 2.4rem;
+	background: #a1f0dc;
+	text-transform: uppercase;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.12);
+}
+
+.start-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: opacity 0.3s ease-in;
+}
+
+.start-button::before {
+	display: initial;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.12);
+	animation: pulse 2s infinite;
+}
+
+.card--info {
+	flex: 1;
+	flex-basis: 18rem;
+	font-weight: 700;
+	background: #fafafa;
+	max-width: 24rem;
+	margin: 1rem 0;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.card--info p {
+	margin: 1.8rem;
+	margin-top: 1rem;
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 1rem;
+	top: 0;
+	height: 2rem;
+}
+
+@media all and (min-width: 40rem) {
+	h3 {
+		font-size: 35vh;
+	}
+
+	.card--info {
+		margin: 1rem;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+@-webkit-keyframes TextGradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@-moz-keyframes TextGradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes TextGradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0.12);
+	}
+	70% {
+		box-shadow: 0 0 1.2rem 1.2rem rgba(0, 0, 0, 0);
+	}
+	100% {
+		box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0);
+	}
+}

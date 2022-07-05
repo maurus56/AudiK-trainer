@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerElement, VisualizerElement } from 'html-midi-player';
-
 @Component({
   selector: 'app-note-visualizer',
   templateUrl: './note-visualizer.component.html',
@@ -11,7 +9,6 @@ export class NoteVisualizerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // let el = document.createElement('PlayerElement');
 
   }
 

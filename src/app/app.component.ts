@@ -61,6 +61,9 @@ export class AppComponent {
   isNotesFilled(){
     return this.notes !== undefined;
   }
+  isFileFilled(){
+    return this.file !== undefined;
+  }
   
 
 

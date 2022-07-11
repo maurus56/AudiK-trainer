@@ -60,9 +60,23 @@ export class NoteDetectionComponent implements OnInit {
     console.log(this.audioAnalyser.fftSize);
   }
 
-  stop() {
-    this.audioContext.suspend();
+
+  resumeAnalyser() {
+    if (this.audioContext?.state === 'suspended') {
+      this.audioContext.resume();
+    }
   }
+
+  pauseAnalyser() {
+    if (this.audioContext?.state === 'running') {
+      this.audioContext.suspend();
+    }
+  }
+
+  stopAnalyser() {
+    this.audioContext?.close();
+  }
+
 
   togglePitchDetector(algo: string) {
     if (!this.algorithms.some(algos => algos.name === algo)) { return };
@@ -84,7 +98,7 @@ export class NoteDetectionComponent implements OnInit {
   }
 
 
-  test() {
+  start() {
     this.started = true;
 
     if ("mediaDevices" in navigator) {

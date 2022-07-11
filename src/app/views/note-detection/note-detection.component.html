@@ -1,9 +1,9 @@
-<button *ngIf="!started" class="start-button" (click)="test()">Start</button>
-<button *ngIf="started" class="start-button" (click)="stop()">Stop</button>
-<button id="control-pause">
+<button *ngIf="!started" (click)="start()">Start</button>
+<button *ngIf="started" (click)="stopAnalyser()">Stop</button>
+<button (click)="pauseAnalyser()">
     <i class="gg-icon gg-play-pause"></i>
 </button>
-<button id="control-play">
+<button (click)="resumeAnalyser()">
     <i class="gg-icon gg-play-button"></i>
 </button>
 
@@ -44,34 +44,3 @@
 
     </ng-container>
 </div>
-
-
-
-
-
-<!-- <h2>{{selectedAlgo}}</h2>
-<button *ngIf="started" class="start-button" (click)="stop()">Stop</button>
-<div class="note-wrapper">
-    <div class="controls">
-        <button id="control-pause">
-            <i class="gg-icon gg-play-pause"></i>
-        </button>
-        <button id="control-play">
-            <i class="gg-icon gg-play-button"></i>
-        </button>
-    </div>
-    <h3 id="a-note">{{note}}</h3>
-    <button *ngIf="!started" class="start-button" (click)="test()">Start</button>
-</div>
-
-<aside>
-    <div class="card--info">
-        <header>frequency (hz)</header>
-        <p id="a-frequency">{{frequency}}</p>
-    </div>
-
-    <div class="card--info">
-        <header>cents</header>
-        <p id="a-cents">{{cents}}</p>
-    </div>
-</aside> -->

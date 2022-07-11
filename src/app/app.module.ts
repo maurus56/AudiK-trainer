@@ -9,6 +9,7 @@ import { PolyphonicDetectionComponent } from './views/polyphonic-detection/polyp
 import { NoteDetectionComponent } from './views/note-detection/note-detection.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './views/home/home.component';
   imports: [
     BrowserModule,
     NgChartsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],

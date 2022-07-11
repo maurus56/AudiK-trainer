@@ -58,53 +58,7 @@ header {
 	border-top-right-radius: 0.3rem;
 }
 
-footer {
-	font-size: 0.8rem;
-	margin-top: 1rem;
-	margin-bottom: 1.4rem;
-}
 
-footer a {
-	font-weight: 700;
-	text-decoration: none;
-	color: #a1f0dc;
-}
-
-/* Animation from: https://www.gradient-animator.com/ */
-footer a:hover,
-footer a:focus {
-	background: linear-gradient(
-		270deg,
-		#00c2eb 20%,
-		#a1f0dc 40%,
-		#00c2eb 60%,
-		#a1f0dc 80%
-	);
-	background-size: 400% auto;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
-	-webkit-animation: TextGradientAnimation 3s ease infinite;
-	-moz-animation: TextGradientAnimation 3s ease infinite;
-	animation: TextGradientAnimation 3s ease infinite;
-}
-
-aside {
-	display: flex;
-	justify-content: center;
-	flex-flow: row wrap;
-}
-
-button {
-	font-size: 1.6rem;
-	font-weight: 700;
-	border: none;
-
-	cursor: pointer;
-	outline: none;
-}
 
 .start-button {
 	font-size: 1.6rem;

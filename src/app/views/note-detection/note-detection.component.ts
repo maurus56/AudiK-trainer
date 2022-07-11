@@ -90,7 +90,7 @@ export class NoteDetectionComponent implements OnInit {
   }
 
   getAlgorithms() {
-    return this.algorithms.map(obj => { return { name: obj.name, active: obj.active, data: obj.data } });
+    return this.algorithms.map(obj => { return { name: obj.name, active: obj.active } });
   }
 
   getData() {

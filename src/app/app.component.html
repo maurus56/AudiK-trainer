@@ -1,28 +1,18 @@
-
-
-<nav style="display: inline-flex">
-    <h1 style="margin-right: 0.5rem;">AudiK Trainer</h1>
-    <a routerLink="/notes" style="margin: 0.5rem;display: grid;align-items: center;"><span>Simple Notes</span></a>
-    <a routerLink="/polyphonic" style="margin: 0.5rem;display: grid;align-items: center;"><span>Polyphonic</span></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand">AudiK Trainer</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" routerLink="/">Home</a>
+                <a class="nav-link" routerLink="/notes">Simple Notes</a>
+                <a class="nav-link" routerLink="/polyphonic">Polyphonic</a>
+            </div>
+        </div>
+    </div>
 </nav>
-
-<!-- <input type="checkbox" id="checkbox">
-<label class="btn" for="checkbox"><i class="fa fa-bars"></i> <span>Menu</span></label>
-
-<div class="sidebar">
-    <ul>
-        <a routerLink="/notes"><li>Simple Notes</li></a>
-        <a routerLink="/polyphonic"><li>Polyphonic</li></a>
-        <a href="#"><li><i class="fa fa-tachometer"></i>Dashboard</li></a>
-        <a href="#"><li><i class="fa fa-lightbulb-o"></i>Widgets</li></a>
-        <a href="#" class="active"><li><i class="fa fa-line-chart"></i>Charts</li></a>
-        <a href="#"><li><i class="fa fa-television"></i>Front-End</li></a>
-        <a href="#"><li><i class="fa fa-send"></i>Email</li></a>
-        <a href="#"><li><i class="fa fa-wpforms"></i>Forms</li></a>
-        <a href="#"><li><i class="fa fa-paint-brush"></i>UI Elements</li></a>
-        <a href="#"><li><i class="fa fa-file-text-o"></i>Pages</li></a>
-        <a href="#"><li><i class="fa fa-globe"></i>Google Maps</li></a>
-    </ul>
-</div> -->
 
 <router-outlet></router-outlet>

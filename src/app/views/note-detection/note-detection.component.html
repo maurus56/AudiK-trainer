@@ -1,18 +1,22 @@
-<button *ngIf="!started" (click)="start()">Start</button>
-<button *ngIf="started" (click)="stopAnalyser()">Stop</button>
-<button (click)="pauseAnalyser()">
-    <i class="gg-icon gg-play-pause"></i>
-</button>
-<button (click)="resumeAnalyser()">
-    <i class="gg-icon gg-play-button"></i>
-</button>
-
-<div>
-    <button *ngFor="let algo of getAlgorithms()" (click)="togglePitchDetector(algo.name)">{{algo.name}}</button>
-</div>
-
-<div *ngFor="let algo of getAlgorithms()">
-    {{algo| json }} <br>
+<div class="d-inline-flex gap-4">
+    <button *ngIf="!started" type="button" class="btn btn-success" (click)="start()">Start</button>
+    <div *ngIf="started" class="btn-group" role="group">
+        <button type="button" class="btn btn-secondary" (click)="resumeAnalyser()">
+            <fa-icon [icon]="['fas', 'play']"></fa-icon>
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="pauseAnalyser()">
+            <fa-icon [icon]="['fas', 'pause']"></fa-icon>
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="stopAnalyser()">
+            <fa-icon [icon]="['fas', 'stop']"></fa-icon>
+        </button>
+    </div>
+    <div class="d-grid gap-2 d-md-flex">
+        <ng-container *ngFor="let algo of getAlgorithms()">
+            <button (click)="togglePitchDetector(algo.name)" class="btn"
+                [ngClass]="algo.active ? 'btn-primary' : 'btn-outline-primary'">{{algo.name}}</button>
+        </ng-container>
+    </div>
 </div>
 
 <div>

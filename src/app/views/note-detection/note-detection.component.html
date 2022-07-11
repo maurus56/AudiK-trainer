@@ -1,3 +1,55 @@
+<button *ngIf="!started" class="start-button" (click)="test()">Start</button>
+<button *ngIf="started" class="start-button" (click)="stop()">Stop</button>
+<button id="control-pause">
+    <i class="gg-icon gg-play-pause"></i>
+</button>
+<button id="control-play">
+    <i class="gg-icon gg-play-button"></i>
+</button>
+
+<div>
+    <button *ngFor="let algo of getAlgorithms()" (click)="togglePitchDetector(algo.name)">{{algo.name}}</button>
+</div>
+
+<div *ngFor="let algo of getAlgorithms()">
+    {{algo| json }} <br>
+</div>
+
+<div>
+    <ng-container *ngFor="let algo of getData()">
+        <div>
+            <div>
+                <h2>{{algo.name}}</h2>
+            </div>
+            <div>
+                <div>
+                    <div class="card--info">
+                        <header>note</header>
+                        <p id="a-frequency">{{algo.data.note}}</p>
+                    </div>
+                    <div class="card--info">
+                        <header>frequency (hz)</header>
+                        <p id="a-frequency">{{algo.data.frequency}}</p>
+                    </div>
+                    <div class="card--info">
+                        <header>cents</header>
+                        <p id="a-cents">{{algo.data.cents}}</p>
+                    </div>
+                </div>
+                <div>
+                    scroll graph of freq
+                </div>
+            </div>
+        </div>
+
+    </ng-container>
+</div>
+
+
+
+
+
+<!-- <h2>{{selectedAlgo}}</h2>
 <button *ngIf="started" class="start-button" (click)="stop()">Stop</button>
 <div class="note-wrapper">
     <div class="controls">
@@ -22,4 +74,4 @@
         <header>cents</header>
         <p id="a-cents">{{cents}}</p>
     </div>
-</aside>
+</aside> -->
